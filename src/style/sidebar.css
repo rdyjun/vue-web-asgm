@@ -1,7 +1,22 @@
 nav {
-    width: 150px;
+    width: 210px;
     height: 100%;
     background-color: #252525;
     position: absolute;
-    color : #fff;
+    padding: 0;
+}
+ul {
+    padding: 0px;
+}
+li {
+    width: 100%;
+    font-size: 112.5%;
+    padding:20px 0px 20px 0px;
+    border-bottom: 1px solid #353535;
+    color: #fff;
+    cursor: pointer;
+}
+li:hover {
+    transition: 0.5s;
+    background-color: #555555;
 }

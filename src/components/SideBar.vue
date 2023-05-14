@@ -2,7 +2,9 @@
   <div class="SideBar">
     <nav>
       <ul>
-        <li v-for="item in menu" :key="item">{{ item }}</li>
+        <a>
+          <li v-for="item in menu" :key="item">{{ item }}</li>
+        </a>
       </ul>
     </nav>
   </div>
@@ -13,7 +15,7 @@ export default {
   name: 'SideBar',
   data () {
     return {
-      menu: ['상품관리', 'ㅁ']
+      menu: ['상품관리', '주문관리', '고객관리']
     }
   }
 }
