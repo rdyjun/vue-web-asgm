@@ -9,12 +9,14 @@ ul {
     padding: 0px;
 }
 li {
+    text-align: center;
     width: 100%;
     font-size: 112.5%;
     padding:20px 0px 20px 0px;
     border-bottom: 1px solid #353535;
     color: #fff;
     cursor: pointer;
+    font-weight : 500;
 }
 li:hover {
     transition: 0.5s;
