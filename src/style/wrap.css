@@ -10,3 +10,15 @@
 a {
     text-decoration: none;
 }
+
+body {
+    background-color: #fdfdfd;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}

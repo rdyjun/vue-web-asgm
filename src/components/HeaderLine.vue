@@ -1,17 +1,18 @@
 <template>
     <div class="HeaderLine">
-      <a><img v-bind:src="logoSrc"></a>
+      <form>
+        <input type="text">
+      </form>
     </div>
   </template>
 
 <script>
-import logoSrc from '@/assets/logo.png'
 
 export default {
   name: 'HeaderLine',
   data () {
     return {
-      logoSrc: logoSrc
+
     }
   }
 }

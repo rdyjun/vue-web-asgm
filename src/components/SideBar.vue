@@ -1,6 +1,7 @@
 <template>
   <div class="SideBar">
     <nav>
+      <a><div id="logo"><img v-bind:src="logoSrc"></div></a>
       <ul>
         <a>
           <li v-for="item in menu" :key="item">{{ item }}</li>
@@ -11,11 +12,14 @@
 </template>
 
 <script>
+import logoSrc from '@/assets/logo.png'
+
 export default {
   name: 'SideBar',
   data () {
     return {
-      menu: ['상품관리', '주문관리', '고객관리']
+      logoSrc: logoSrc,
+      menu: ['상품관리', '주문관리', '문의관리', '공지사항']
     }
   }
 }
