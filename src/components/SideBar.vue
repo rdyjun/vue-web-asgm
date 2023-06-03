@@ -1,6 +1,6 @@
 <template>
   <div class="SideBar">
-    <nav>
+    <nav id="gnb">
       <a><div id="logo"><img v-bind:src="logoSrc"></div></a>
       <ul>
         <a>

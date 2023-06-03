@@ -1,7 +1,3 @@
-body {
-    
-}
-
 #loginForm {
     width: 400px;
     height: 500px;
@@ -15,23 +11,24 @@ body {
     transform: translate(-50%, -50%);
 }
 
-img {
+#loginLogo {
     width: 70px;
+    margin-bottom: 30px;
 }
-input {
+#loginForm input {
     width: 280px;
     height: 48px;
     border: none;
     border-radius: 0.5em;
 }
-input[type="submit"] {
+#loginForm input[type="submit"] {
     cursor : pointer;
     font-size: 18px;
     font-weight: 700;
     background-color: rgb(66, 184, 131);
     color: #fff;
 }
-input:focus {
+#loginForm input:focus {
     outline: none;
 }
 .inputBox {
@@ -56,5 +53,3 @@ input:focus {
     float : left;
     margin-left: 10px;
 }
-
-

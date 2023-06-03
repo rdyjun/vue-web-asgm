@@ -1,5 +1,5 @@
 <template>
-  <SideBar />
+  <SideBar v-if="!isLogin" />
   <!-- <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
@@ -14,6 +14,11 @@ export default {
   name: 'App',
   components: {
     SideBar
+  },
+  computed: {
+    isLogin () {
+      return this.$route.path === '/login'
+    }
   }
 }
 </script>

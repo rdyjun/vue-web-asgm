@@ -1,7 +1,7 @@
 <template>
     <div class="login">
         <div id="loginForm">
-            <img :src="logoSrc">
+            <img id="loginLogo" :src="logoSrc">
             <form>
                 <div class="inputBox">
                     <input @focus="onFocus" @blur="onBlur" type="text" placeholder="ID" required>
@@ -10,7 +10,7 @@
                     <input @focus="onFocus" @blur="onBlur" type="text" v-model="password" placeholder="PASSWORD" required>
                 </div>
                 <p class="hint" >{{hint}}</p>
-                <input type="submit" value="로그인">
+                <input type="submit" value="로그인" @click="moveToMain">
             </form>
         </div>
     </div>
@@ -46,6 +46,9 @@ export default {
     onBlur (event) {
       event.target.parentElement.style.border = '1.5px solid #DDDDDD'
       event.target.parentElement.style.boxShadow = 'none'
+    },
+    moveToMain () {
+      this.$router.push({ path: '/' })
     }
   }
 }

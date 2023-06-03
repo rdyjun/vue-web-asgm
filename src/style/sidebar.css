@@ -1,4 +1,4 @@
-nav {
+#gnb {
     width: 210px;
     height: 100%;
     background-color: #34495e;
@@ -12,14 +12,14 @@ nav {
     background-color: #1e2832;
     cursor: pointer;
 }
-img {
+#gnb img {
     padding: 15px 22.5px 15px 22.5px;
     width: 50px;
 }
-ul {
+#gnb > ul {
     padding: 0px;
 }
-li {
+#gnb > ul > li {
     text-align: center;
     width: 100%;
     font-size: 112.5%;
