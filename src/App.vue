@@ -1,5 +1,6 @@
 <template>
   <SideBar v-if="!isLogin" />
+  <HeaderLine />
   <!-- <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
@@ -9,11 +10,13 @@
 
 <script>
 import SideBar from '@/components/SideBar.vue'
+import HeaderLine from '@/components/HeaderLine.vue'
 
 export default {
   name: 'App',
   components: {
-    SideBar
+    SideBar,
+    HeaderLine
   },
   computed: {
     isLogin () {

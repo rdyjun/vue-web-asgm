@@ -1,0 +1,78 @@
+#gradeProgressArea {
+    display: flex;
+}
+
+#progessArea {
+    width: 80%;
+    display:flex;
+    flex-direction: column;
+}
+
+#gradeCalcArea {
+    width: 20%;
+    display:flex;
+    flex-direction: column;
+}
+
+.gradeSubTitle {
+    font-size: 20px;
+    line-height: 36px;
+    text-align: left;
+}
+
+.gradeMenuProgress {
+    border: none;
+    border-radius: 10px;
+    width: 80%;
+    height: 8px;
+    margin-bottom: 30px;
+}
+
+.redProgress {
+    color: red;
+}
+.yellowProgress {
+    color: orange;
+}
+.greenProgress {
+    color: #41b883;
+}
+
+.redProgress::-webkit-progress-value {
+    background-color: red;
+    border-radius: 10px;
+}
+.yellowProgress::-webkit-progress-value {
+    background-color: orange;
+    border-radius: 10px;
+}
+.greenProgress::-webkit-progress-value {
+    background-color: #41b883;
+    border-radius: 10px;
+}
+.gradeMenuProgress::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 10px;
+}
+
+#gradeCalcArea p {
+    line-height: 22px;
+}
+#gradeCalcArea p:first-child {
+    margin-top: 6px;
+}
+
+#gradeCalcArea p:nth-child(even) {
+    margin-bottom: 30px;
+}
+
+#gradeMenuUpdate {
+    margin-top: 30px;
+    text-align: left;
+}
+
+#gradeMenuUpdate li {
+    margin-left: 30px;
+    color: rgba(0, 0, 0, 0.5);
+    list-style: disc;
+}

@@ -1,34 +1,47 @@
 .HeaderLine {
-    position: relative;
     z-index: 0;
-    width: 100%;
     height: 80px;
+    width: calc(100% - 210px);
     background-color: #fdfdfd;
-    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding-left: 210px;
+    left: 0;
+    top: 0;
 }
 
 #search-box {
-    width: 150px;
-    height: 30px;
-    margin-top: 23px;
+    width: 250px;
+    height: 40px;
+    margin-left: 30px;
 }
 #user {
     width: 300px;
     height: 100%;
-    border: 1px solid red;
     display: flex;
+    margin-right: 30px;
 }
 
 #username {
     font-weight: 700;
     line-height: 80px;
+    width: 100px;
 }
 
 #mypage, #logout {
     width: 80px;
     height: 32px;
     margin-top: 24px;
+    cursor: pointer;
+}
+#mypage {
+    margin-right: 8px;
+}
+#logout {
+    margin-left: 8px;
 }
 
 .part {

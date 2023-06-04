@@ -1,0 +1,24 @@
+
+.menuOfOrder ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.menuOfOrder ul li:last-child {
+    border: none;
+}
+#moomenus {
+    width: 80%;
+    text-align: left;
+    font-size: 20px;
+    line-height: 64px;
+    font-weight: 500;
+}
+#moomenucounts {
+    width: 20%;
+    text-align: right;
+    font-size:24px;
+    font-weight: 700;
+    color: dodgerblue;
+}
