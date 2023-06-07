@@ -1,6 +1,6 @@
 <template>
   <SideBar v-if="!isLogin" />
-  <HeaderLine />
+  <HeaderLine v-if="!isLogin" />
   <!-- <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>

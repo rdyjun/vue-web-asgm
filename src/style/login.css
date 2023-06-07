@@ -20,6 +20,7 @@
     height: 48px;
     border: none;
     border-radius: 0.5em;
+    background-color: #eee;
 }
 #loginForm input[type="submit"] {
     cursor : pointer;
@@ -31,6 +32,7 @@
 #loginForm input:focus {
     outline: none;
 }
+
 .inputBox {
     width: 300px;
     height: 48px;
@@ -38,6 +40,8 @@
     border-radius: 0.5em;
     border: 1.5px solid #dddddd;
     padding-left: 20px;
+    background-color: #eee;
+    margin: 0 auto;
 }
 .inputBox:first-child {
     margin-bottom: 16px;

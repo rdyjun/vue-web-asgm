@@ -1,6 +1,64 @@
 
 .product {
     background-color: #fdfdfd;
-    width: 100%;
+    width: cal(100% - 60px);
     height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#productTop {
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.productButton {
+    width: 80px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#productUpdateButton > * {
+    margin-right: 14px;
+}
+
+
+#productUpdateButton *:last-child {
+    margin-right: 0px;
+}
+#productList, #productList td, #productList th{
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+
+#productList th, td {
+    width: 60px;
+    height: 60px;
+}
+
+#main_checkbox {
+    width: 24px;
+    height: 24px;
+}
+
+#itemUpdateButton {
+    width: 45px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.priceInput {
+    height: 100%;
+    border: none;
+    padding-left: 20px;
+    background-color: #eee;
+    font-size: 16px;
 }

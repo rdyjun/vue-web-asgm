@@ -2,7 +2,7 @@
     <div class="HeaderLine">
       <form>
         <font-awesome-icon :icon="['fas', 'magnifying-glass']" />
-        <input id="search-box" type="text" placeholder="검색할 내용을 입력하세요.">
+        <input id="search-box" type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;검색할 내용을 입력하세요.">
       </form>
       <div id="user">
         <p id="username">{{ userName }} 님</p>

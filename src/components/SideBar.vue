@@ -1,11 +1,9 @@
 <template>
   <div class="SideBar">
     <nav id="gnb">
-      <a><div id="logo"><img v-bind:src="logoSrc"></div></a>
+      <a href="/"><div id="logo"><img v-bind:src="logoSrc"></div></a>
       <ul>
-        <a>
-          <li v-for="item in menu" :key="item">{{ item }}</li>
-        </a>
+          <li v-for="(item, idx) in menu" :key="item" @click="moveToPage(idx)">{{ item }}</li>
       </ul>
     </nav>
   </div>
@@ -19,7 +17,13 @@ export default {
   data () {
     return {
       logoSrc: logoSrc,
-      menu: ['상품관리', '주문관리', '문의관리', '공지사항']
+      menu: ['상품관리', '주문관리', '문의관리', '공지사항'],
+      menuclick: ['product', 'order', 'cs', 'notice']
+    }
+  },
+  methods: {
+    moveToPage (val) {
+      this.$router.push({ path: '/' + this.menuclick[val] })
     }
   }
 }
