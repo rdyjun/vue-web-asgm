@@ -1,0 +1,49 @@
+
+.Notice {
+    background-color: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-content: center;
+    align-items: center;
+}
+
+#noticeFilter {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    align-items: center;
+}
+
+#resetFilterBtn {
+    cursor: pointer;
+    width: 80px;
+    height: 40px;
+}
+
+#noticeTable {
+    border-collapse: collapse;
+    font-size: 18px;
+    line-height: 40px;
+    width: 100%;
+}
+
+#noticeTable, #noticeTable td, #noticeTable th {
+    border: 1px solid #ddd;
+}
+
+.s {
+    text-align: left;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+}
+.noticeNumberBtn {
+    cursor: pointer;
+    margin-top: 30px;
+    width: 36px;
+    height: 36px;
+}

@@ -12,6 +12,7 @@
                 <p class="hint" >{{hint}}</p>
                 <input type="submit" value="로그인" @click="moveToMain">
             </form>
+            <p id="loginCopyright">Copyright 2022. SungJun Joo all rights reserved.</p>
         </div>
     </div>
 </template>

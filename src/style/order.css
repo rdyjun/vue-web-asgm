@@ -1,0 +1,43 @@
+.order {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fdfdfd;
+    flex-direction: column;
+    align-items: center;
+}
+
+#orderTop {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.status-item {
+    width: 20%;
+    text-align: center;
+}
+
+#orderTable{
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1650px;
+}
+
+#orderTable th, #orderTable td {
+    border: 1px solid #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#orderPageNumber {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.orderPageNumberBtn {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+}

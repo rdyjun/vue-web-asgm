@@ -1,10 +1,9 @@
 #loginForm {
     width: 400px;
-    height: 500px;
     border: 1.5px solid #dddddd;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
     border-radius: 1em;
-    padding: 30px;
+    padding: 60px 30px 30px 30px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -12,22 +11,24 @@
 }
 
 #loginLogo {
-    width: 70px;
-    margin-bottom: 30px;
+    width: 100px;
+    margin-bottom: 60px;
 }
 #loginForm input {
-    width: 280px;
+    width: 260px;
     height: 48px;
     border: none;
     border-radius: 0.5em;
     background-color: #eee;
 }
 #loginForm input[type="submit"] {
+    width: 280px !important;
     cursor : pointer;
     font-size: 18px;
     font-weight: 700;
     background-color: rgb(66, 184, 131);
     color: #fff;
+    margin-top: 30px;
 }
 #loginForm input:focus {
     outline: none;
@@ -38,7 +39,7 @@
     height: 48px;
     font-size: 16px;
     border-radius: 0.5em;
-    border: 1.5px solid #dddddd;
+    border: 2px solid #dddddd;
     padding-left: 20px;
     background-color: #eee;
     margin: 0 auto;
@@ -56,4 +57,9 @@
     padding-left: 30px;
     float : left;
     margin-left: 10px;
+}
+#loginCopyright {
+    line-height: 70px;
+    height: 70px;
+    font-size: 14px;
 }
