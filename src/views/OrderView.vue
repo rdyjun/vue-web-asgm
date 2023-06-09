@@ -2,17 +2,21 @@
     <div class="order">
       <div id="orderTop">
         <div v-for="status in orderStatuses" :key="status" class="status-item">
-          <h2 @click="filterOrdersByStatus(status)">
-            {{ status }} ({{ getOrderCountByStatus(status) }})
-          </h2>
+          <h2 class="menucount" @click="filterOrdersByStatus(status)">{{ getOrderCountByStatus(status) }}</h2>
+          <h3>
+            {{ status }}
+          </h3>
         </div>
-        <select v-model="ordersPerPage">
+        <select id="orderViewListCount" v-model="ordersPerPage">
           <option value="20">20</option>
           <option value="30">30</option>
           <option value="50">50</option>
         </select>
       </div>
-      <table id="orderTable">
+      <div id="orderTableDiv">
+        <div class="shadow-left"></div>
+        <div class="shadow-right"></div>
+        <table id="orderTable">
         <thead>
           <tr>
             <th>주문상태</th>
@@ -42,8 +46,9 @@
           </tr>
         </tbody>
       </table>
+      </div>
       <div id="orderPageNumber" :style="{width: paginationWidthAuto + 'px'}">
-        <button class="orderPageNumberBtn" v-for="page in totalPages" :key="page" :class="{ active: currentPage === page }" @click="setCurrentPage(page)">{{ page }}</button>
+        <button class="orderPageNumberBtn" v-for="page in totalPages" :key="page" :class="{ active: currentPage === page }" @click="setCurrentPage(page)" :disabled="currentPage == page">{{ page }}</button>
       </div>
     </div>
   </template>
@@ -106,6 +111,26 @@ export default {
     }
   },
   methods: {
+    checkScroll (e) {
+      const el = this.$el.querySelector('#orderTableDiv')
+      const scrollLeft = el.scrollLeft
+      const scrollWidth = el.scrollWidth
+      const offsetWidth = el.offsetWidth
+      const shadowLeft = this.$el.querySelector('.shadow-left')
+      const shadowRight = this.$el.querySelector('.shadow-right')
+
+      if (scrollLeft > 0) {
+        shadowLeft.style.display = 'block'
+      } else {
+        shadowLeft.style.display = 'none'
+      }
+
+      if (scrollLeft < scrollWidth - offsetWidth) {
+        shadowRight.style.display = 'block'
+      } else {
+        shadowRight.style.display = 'none'
+      }
+    },
     getOrderCountByStatus (status) {
       return this.orders.filter(order => order.orderStatus === status).length
     },
@@ -115,6 +140,15 @@ export default {
     filterOrdersByStatus (status) {
       this.filteredStatus = status
     }
+  },
+  mounted () {
+    const el = this.$el.querySelector('#orderTableDiv')
+    el.addEventListener('scroll', this.checkScroll)
+    this.checkScroll()
+  },
+  beforeUnmount () {
+    const el = this.$el.querySelector('#orderTableDiv')
+    el.removeEventListener('scroll', this.checkScroll)
   }
 }
 </script>

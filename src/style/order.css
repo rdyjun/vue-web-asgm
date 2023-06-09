@@ -4,21 +4,45 @@
     background-color: #fdfdfd;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
+    padding: 30px;
+    align-content: center;
 }
 
 #orderTop {
-    width: 100%;
+    width: 100%;    
     display: flex;
     justify-content: space-around;
+    overflow: scroll;
 }
 
 .status-item {
     width: 20%;
     text-align: center;
 }
+.status-item > .menucount {
+    margin: 0;
+}
+
+#orderViewListCount {
+    width: 100px;
+    height: 40px;
+}
+
+#orderTableDiv {
+    width: 100%;
+    margin-top: 30px;
+    overflow:scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    position: relative;
+}
+
+#orderTableDiv::-webkit-scrollbar {
+    display: none;
+}
 
 #orderTable{
-    width: 100%;
     border-collapse: collapse;
     min-width: 1650px;
 }
@@ -28,6 +52,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    height: 24px;
 }
 
 #orderPageNumber {
@@ -35,6 +60,27 @@
     display: flex;
     justify-content: space-between;
 }
+
+.shadow-left,
+.shadow-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.shadow-left {
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+}
+
+.shadow-right {
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+}
+
 
 .orderPageNumberBtn {
     width: 36px;
