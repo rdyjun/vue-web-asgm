@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import logoSrc from '@/assets/logo.png'
+import logoSrc from '@/assets/logo.gif'
 
 export default {
   name: 'SideBar',

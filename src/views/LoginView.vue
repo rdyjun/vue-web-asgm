@@ -10,6 +10,9 @@
                     <input @focus="onFocus" @blur="onBlur" type="text" v-model="password" placeholder="PASSWORD" required>
                 </div>
                 <p class="hint" >{{hint}}</p>
+                <div id="otherLoginButton">
+                  <button><img :src="githubSrc"></button>
+                </div>
                 <input type="submit" value="로그인" @click="moveToMain">
             </form>
             <p id="loginCopyright">Copyright 2022. SungJun Joo all rights reserved.</p>
@@ -18,7 +21,8 @@
 </template>
 
 <script>
-import logoSrc from '@/assets/logo.png'
+import logoSrc from '@/assets/logo.gif'
+import githubSrc from '@/assets/github.png'
 
 export default {
   name: 'LoginView',
