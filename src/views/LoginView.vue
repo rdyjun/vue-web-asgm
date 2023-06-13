@@ -11,9 +11,12 @@
                 </div>
                 <p class="hint" >{{hint}}</p>
                 <div id="otherLoginButton">
-                  <button><img :src="githubSrc"></button>
+                  <button><img :src="githubSrc">Github</button>
+                  <button><img :src="kakaoSrc">Kakao</button>
+                  <button><img :src="googleSrc">Google</button>
                 </div>
-                <input type="submit" value="로그인" @click="moveToMain">
+                <input type="submit" value="로그인" @click="moveToMain('/')">
+                <input type="submit" id="registerBtn" value="회원가입" @click="moveToMain('/register')">
             </form>
             <p id="loginCopyright">Copyright 2022. SungJun Joo all rights reserved.</p>
         </div>
@@ -23,12 +26,17 @@
 <script>
 import logoSrc from '@/assets/logo.gif'
 import githubSrc from '@/assets/github.png'
+import kakaoSrc from '@/assets/kakao.png'
+import googleSrc from '@/assets/google.png'
 
 export default {
   name: 'LoginView',
   data () {
     return {
       logoSrc: logoSrc,
+      githubSrc: githubSrc,
+      googleSrc: googleSrc,
+      kakaoSrc: kakaoSrc,
       password: '',
       showable: 'hide',
       hint: '비밀번호를 8자 이상 입력해주세요.'
@@ -52,8 +60,8 @@ export default {
       event.target.parentElement.style.border = '1.5px solid #DDDDDD'
       event.target.parentElement.style.boxShadow = 'none'
     },
-    moveToMain () {
-      this.$router.push({ path: '/' })
+    moveToMain (s) {
+      this.$router.push({ path: s })
     }
   }
 }

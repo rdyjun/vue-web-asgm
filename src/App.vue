@@ -20,7 +20,7 @@ export default {
   },
   computed: {
     isLogin () {
-      return this.$route.path === '/login'
+      return this.$route.path === '/login' || this.$route.path === '/register'
     }
   }
 }
