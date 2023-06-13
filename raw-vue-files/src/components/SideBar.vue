@@ -1,7 +1,7 @@
 <template>
   <div class="SideBar">
     <nav id="gnb">
-      <div id="logo" @click="moveToPage('')"><img v-bind:src="logoSrc" style="cursor:pointer"></div>
+      <div id="logo" @click="moveTomain"><img v-bind:src="logoSrc" style="cursor:pointer"></div>
       <ul>
           <li v-for="(item, idx) in menu" :key="item" @click="moveToPage(idx)">{{ item }}</li>
       </ul>
@@ -24,6 +24,9 @@ export default {
   methods: {
     moveToPage (val) {
       this.$router.push({ path: '/' + this.menuclick[val] })
+    },
+    moveTomain () {
+      this.$router.push({ path: '/' })
     }
   }
 }
