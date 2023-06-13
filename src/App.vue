@@ -6,17 +6,20 @@
     <router-link to="/about">About</router-link>
   </nav> -->
   <router-view/>
+  <FooterLine v-if="!isLogin" />
 </template>
 
 <script>
 import SideBar from '@/components/SideBar.vue'
 import HeaderLine from '@/components/HeaderLine.vue'
+import FooterLine from '@/components/FooterLine.vue'
 
 export default {
   name: 'App',
   components: {
     SideBar,
-    HeaderLine
+    HeaderLine,
+    FooterLine
   },
   computed: {
     isLogin () {
@@ -35,6 +38,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  margin-bottom: 120px;
 }
 
 nav {

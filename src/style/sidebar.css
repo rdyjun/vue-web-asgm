@@ -15,8 +15,8 @@
     cursor: pointer;
 }
 #gnb img {
-    padding: 15px 22.5px 15px 22.5px;
-    width: 50px;
+    padding: 0px 22.5px 15px 22.5px;
+    width: 80px;
 }
 #gnb > ul {
     padding: 0px;

@@ -17,8 +17,8 @@ export default {
   data () {
     return {
       logoSrc: logoSrc,
-      menu: ['상품관리', '주문관리', '문의관리', '공지사항'],
-      menuclick: ['product', 'order', 'cs', 'notice']
+      menu: ['상품관리', '주문관리', '자기소개', '공지사항'],
+      menuclick: ['product', 'order', 'about', 'notice']
     }
   },
   methods: {

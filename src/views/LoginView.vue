@@ -11,9 +11,9 @@
                 </div>
                 <p class="hint" >{{hint}}</p>
                 <div id="otherLoginButton">
-                  <button><img :src="githubSrc">Github</button>
-                  <button><img :src="kakaoSrc">Kakao</button>
-                  <button><img :src="googleSrc">Google</button>
+                  <button><img :src="githubSrc" @click="moveToMainWithAlert('github')">Github</button>
+                  <button><img :src="kakaoSrc" @click="moveToMainWithAlert('Kakao')">Kakao</button>
+                  <button><img :src="googleSrc" @click="moveToMainWithAlert('Google')">Google</button>
                 </div>
                 <input type="submit" value="로그인" @click="moveToMain('/')">
                 <input type="submit" id="registerBtn" value="회원가입" @click="moveToMain('/register')">
@@ -62,6 +62,10 @@ export default {
     },
     moveToMain (s) {
       this.$router.push({ path: s })
+    },
+    moveToMainWithAlert (s) {
+      alert(s + '를 통해 성공적으로 로그인 했습니다 !')
+      this.$router.push({ path: '/' })
     }
   }
 }
