@@ -1,7 +1,7 @@
 <template>
   <div class="SideBar">
     <nav id="gnb">
-      <a href="/"><div id="logo"><img v-bind:src="logoSrc"></div></a>
+      <div id="logo" @click="moveToPage('')"><img v-bind:src="logoSrc" style="cursor:pointer"></div>
       <ul>
           <li v-for="(item, idx) in menu" :key="item" @click="moveToPage(idx)">{{ item }}</li>
       </ul>
